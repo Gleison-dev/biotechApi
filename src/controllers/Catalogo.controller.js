@@ -37,6 +37,15 @@ function buscarProdutoPorNome(nome){
     }
 }
 
+function buscarProdutoPorPreco(preco){
+    const produto = listaCatalogo.find(data => data.preco === preco);
+    if(produto){
+        return produto;
+    }else{
+        return "Produto não encontrado!"
+    }
+}
+
 function alterarPreco(nome, preco, novoPreco){
     const produto = listaCatalogo.find(data => data.nome === nome);
     if(produto){
@@ -59,4 +68,4 @@ function deletarProduto(id, nome){
     }
 }
 
-export { criarCatalogo, buscarCatalogo, buscarProdutoPorNome, alterarPreco, deletarProduto }
+export { criarCatalogo, buscarCatalogo, buscarProdutoPorNome, buscarProdutoPorPreco, alterarPreco, deletarProduto }

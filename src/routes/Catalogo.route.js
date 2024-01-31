@@ -3,6 +3,7 @@ import {
     criarCatalogo,
     buscarCatalogo,
     buscarProdutoPorNome,
+    buscarProdutoPorPreco,
     alterarPreco,
     deletarProduto
 } from "../controllers/Catalogo.controller.js";
@@ -24,6 +25,12 @@ catalogoRoute.get("/produto-find", (req, res) => {
     const { nome } = req.body;
     const produtoFind = buscarProdutoPorNome(nome);
     res.json({produtoFind});
+});
+
+catalogoRoute.get("/produto-find-preco", (req, res) => {
+    const { preco } = req.body;
+    const produtoFindPreco = buscarProdutoPorPreco(preco);
+    res.json({produtoFindPreco});
 });
 
 catalogoRoute.put("/alterar-preco", (req, res) => {

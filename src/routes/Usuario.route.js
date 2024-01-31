@@ -3,6 +3,7 @@ import {
     criarUsuario,
     buscarTodosUsuarios,
     buscarUsuarioPorNome,
+    buscarUsuarioPorId,
     alterarSenha,
     deletarUsuario
 } from "../controllers/Usuario.controller.js";
@@ -24,6 +25,12 @@ usuarioRoute.get("/usuario-find", (req, res) => {
     const { nome } = req.body;
     const usuarioFind = buscarUsuarioPorNome(nome);
     res.json({usuarioFind});
+});
+
+usuarioRoute.get("/usuario-find-id", (req, res) => {
+    const { id } = req.body;
+    const usuarioFindId = buscarUsuarioPorId(id);
+    res.json({usuarioFindId});
 });
 
 usuarioRoute.put("/alterar-senha", (req, res) => {

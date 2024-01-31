@@ -3,6 +3,7 @@ import {
     criarProducao,
     buscarProducao,
     buscarProducaoPorMes,
+    buscarProducaoPorProducaoKg,
     alterarProducaoKg,
     deletarProduto
 } from "../controllers/Producao.controller.js";
@@ -24,6 +25,12 @@ producaoRoute.get("/producao-find", (req, res) => {
     const { mes } = req.body;
     const producaoFind = buscarProducaoPorMes(mes);
     res.json({producaoFind});
+});
+
+producaoRoute.get("/producao-find-kg", (req, res) => {
+    const { producaoKg } = req.body;
+    const producaoFindKg = buscarProducaoPorProducaoKg(producaoKg);
+    res.json({producaoFindKg});
 });
 
 producaoRoute.put("/alterar-producao", (req, res) => {

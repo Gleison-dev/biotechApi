@@ -37,6 +37,15 @@ function buscarProducaoPorMes(mes){
     }
 }
 
+function buscarProducaoPorProducaoKg(producaoKg){
+    const producao = listaProducao.find(data => data.producaoKg === producaoKg);
+    if(producao){
+        return producao;
+    }else{
+        return "Dados incorretos!"
+    }
+}
+
 function alterarProducaoKg(mes, producaoKg, novaProducaoKg){
     const producao = listaProducao.find(data => data.mes === mes);
     if(producao){
@@ -59,4 +68,4 @@ function deletarProduto(id, mes){
     }
 }
 
-export { criarProducao, buscarProducao, buscarProducaoPorMes, alterarProducaoKg, deletarProduto }
+export { criarProducao, buscarProducao, buscarProducaoPorMes, buscarProducaoPorProducaoKg, alterarProducaoKg, deletarProduto }

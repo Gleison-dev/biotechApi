@@ -32,6 +32,15 @@ function buscarUsuarioPorNome(nome){
     }
 }
 
+function buscarUsuarioPorId(id){
+    const usuario = listaUsuario.find(data => data.id === id);
+    if(usuario){
+        return usuario;
+    }else{
+        return "Usuário não encontrado!"
+    }
+}
+
 // UPDATE
 function alterarSenha(email, senha, novaSenha){
     const usuario = listaUsuario.find(data => data.email === email);
@@ -56,4 +65,4 @@ function deletarUsuario(email, senha){
     }
 }
 
-export { criarUsuario, buscarTodosUsuarios, buscarUsuarioPorNome, alterarSenha,  deletarUsuario };
+export { criarUsuario, buscarTodosUsuarios, buscarUsuarioPorNome, buscarUsuarioPorId, alterarSenha,  deletarUsuario };
