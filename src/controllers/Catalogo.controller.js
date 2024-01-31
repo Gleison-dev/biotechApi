@@ -1,6 +1,22 @@
 import { Catalogo } from "../models/Catalogo.model.js";
 
-let listaCatalogo = [];
+let listaCatalogo = [
+    {
+        id: Math.floor(Math.random() * 100),
+        nome: "Banana da Terra",
+        preco: 4.50
+    },
+    {
+        id: Math.floor(Math.random() * 100),
+        nome: "Maça Fuji",
+        preco: 12.10
+    },
+    {
+        id: Math.floor(Math.random() * 100),
+        nome: "Mamão Papaya",
+        preco: 6.20
+    }
+];
 
 function criarCatalogo(nome, preco){
     const novoCatalogo = new Catalogo(nome, preco);

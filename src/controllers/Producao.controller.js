@@ -1,6 +1,22 @@
 import { Producao } from "../models/Producao.model.js";
 
-let listaProducao = [];
+let listaProducao = [
+    {
+        id: Math.floor(Math.random() * 100),
+        mes: "Janeiro",
+        producaoKg: 56
+    },
+    {
+        id: Math.floor(Math.random() * 100),
+        mes: "Fevereiro",
+        producaoKg: 99
+    },
+    {
+        id: Math.floor(Math.random() * 100),
+        mes: "Março",
+        producaoKg: 78
+    }
+];
 
 function criarProducao(mes, producaoKg){
     const novaProducao = new Producao(mes, producaoKg);

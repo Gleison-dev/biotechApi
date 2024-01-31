@@ -1,6 +1,14 @@
 import { Usuario } from "../models/Usuario.model.js";
 
-let listaUsuario = [];
+let listaUsuario = [
+    {
+        id: Math.floor(Math.random() * 100),
+        nome: "Ana",
+        email: 'ana@email.com',
+        senha: '123456',
+        cpf: "123.456.789-00"
+    }
+];
 
 // CREATE
 function criarUsuario(nome, email, senha, cpf){
