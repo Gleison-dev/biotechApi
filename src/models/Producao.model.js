@@ -1,6 +1,7 @@
+import { v4 as uuidv4 } from "uuid";
 class Producao{
     constructor(mes, producaoKg){
-        this.id = Math.floor(Math.random() * 100);
+        this.id = uuidv4();
         this.mes = mes;
         this.producaoKg = producaoKg;
     }
